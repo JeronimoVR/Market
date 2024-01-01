@@ -9,7 +9,7 @@ import org.mapstruct.Mappings;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring",uses = {CategoryMapper.class})
+@Mapper(componentModel = "spring", uses = {CategoryMapper.class})
 public interface ProductMapper {
 
     @Mappings({
@@ -27,6 +27,6 @@ public interface ProductMapper {
 
 
     @InheritInverseConfiguration
-    @Mapping(target = "codigoBarras",ignore = true)
+    @Mapping(target = "codigoBarras", ignore = true)
     Producto toProducto(Product product);
 }
