@@ -3,6 +3,8 @@ package com.jeronimo.market.web.controller;
 import com.jeronimo.market.domain.Product;
 import com.jeronimo.market.domain.repository.ProductRepository;
 import com.jeronimo.market.domain.service.ProductService;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchClientAutoConfiguration;
 import org.springframework.http.HttpStatus;
@@ -20,6 +22,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/all")
+    @OpenAPIDefinition(info)
     public ResponseEntity<List<Product>> getAll() {
         return new ResponseEntity<>(productService.getAll(), HttpStatus.OK);
     }
