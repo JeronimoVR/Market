@@ -34,8 +34,9 @@ public class ProductService {
         if (getProduct(productId).isPresent()) {
             productRepository.delete(productId);
             return true;
-        }else{
+        } else {
             return false;
         }
     }
+
 }

@@ -52,4 +52,5 @@ public class Categoria {
     public void setProducto(List<Producto> producto) {
         this.producto = producto;
     }
+
 }

@@ -1,10 +1,10 @@
 package com.jeronimo.market.domain;
 
 public class PurchaseItem {
-private int productId;
-private int quantity;
-private double total;
-private boolean active;
+    private int productId;
+    private int quantity;
+    private double total;
+    private boolean active;
 
     public int getProductId() {
         return productId;
@@ -37,4 +37,5 @@ private boolean active;
     public void setActive(boolean active) {
         this.active = active;
     }
+
 }
