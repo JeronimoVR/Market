@@ -22,7 +22,6 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/all")
-    @OpenAPIDefinition(info)
     public ResponseEntity<List<Product>> getAll() {
         return new ResponseEntity<>(productService.getAll(), HttpStatus.OK);
     }
